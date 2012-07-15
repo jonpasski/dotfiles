@@ -1,8 +1,8 @@
-# TODO: need to do backups
-
-DOTFILES=~/local-src/dotfiles
+#TODO need to source a file for an optional dotfiles directory
+DOTFILES=~/src/dotfiles
 BACKUPS=${DOTFILES}/backups
 
+#TODO use test, very hackish for all of the below
 mkdir -p ${BACKUPS}/{vim,bash}
 
 cp ~/.vimrc ${BACKUPS}/vim/
