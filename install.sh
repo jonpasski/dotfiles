@@ -1,5 +1,8 @@
 #TODO need to source a file for an optional dotfiles directory
-DOTFILES=~/src/dotfiles
+if [ -r ~/.dotfiles ]; then
+    source ~/.dotfiles
+fi
+DOTFILES=${DOTFILES:-~/src/dotfiles}; 
 BACKUPS=${DOTFILES}/backups
 
 #TODO use test, very hackish for all of the below

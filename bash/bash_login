@@ -1,13 +1,16 @@
-
+if [ -r ~/.dotfiles ]; then
+    source ~/.dotfiles
+fi
+DOTFILES=${DOTFILES:-~/src/dotfiles}; export DOTFILES
 # hackish
 case `uname` in
     Darwin)
-        for config_file in ~/src/dotfiles/bash/*-macosx.bash; do
+        for config_file in ${DOTFILES}/bash/*-macosx.bash; do
             source $config_file
         done
         ;;
     Linux)
-        for config_file in ~/src/dotfiles/bash/*-macosx.bash; do
+        for config_file in ${DOTFILES}/bash/*-linux.bash; do
             source $config_file
         done
         ;;
@@ -15,7 +18,7 @@ case `uname` in
         ;;
 esac
 
-for config_file in ~/src/dotfiles/bash/*-neutral.bash; do
+for config_file in ${DOTFILES}/bash/*-neutral.bash; do
     source $config_file
 done
 

@@ -1,10 +1,11 @@
 
 # linux-ism, need to incorporate
 if [ -x /usr/bin/dircolors ]; then
+    if [ ! -r ~/.dircolors ]; then
+	cp ${DOTFILES}/bash/dircolors ~/.dircolors
+    fi
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --c l r=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias ls='ls --color=auto'
 fi
 
 alias grep='grep --color=auto'
