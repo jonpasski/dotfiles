@@ -2,6 +2,7 @@ if [ -r ~/.dotfiles ]; then
     source ~/.dotfiles
 fi
 DOTFILES=${DOTFILES:-~/src/dotfiles}; export DOTFILES
+(cd $DOTFILES && git pull -q)
 # hackish
 case `uname` in
     Darwin)
