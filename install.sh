@@ -1,6 +1,6 @@
 # TODO: need to do backups
 
-DOTFILES=~/src/dotfiles
+DOTFILES=~/local-src/dotfiles
 BACKUPS=${DOTFILES}/backups
 
 mkdir -p ${BACKUPS}/{vim,bash}
@@ -13,7 +13,7 @@ ln -fs ${DOTFILES}/bash/bash_login ~/.bash_login
 
 # vundle
 mkdir -p ~/.vim/bundle
-(cd ${DOTFILES}/vundle && git submodule init &&  git submodule update)
+(cd ${DOTFILES} && git submodule init &&  git submodule update)
 
 cp -R ~/.vim/bundle/vundle ${BACKUPS}/vim/vundle
 ln -fs ${DOTFILES}/vundle ~/.vim/bundle/vundle

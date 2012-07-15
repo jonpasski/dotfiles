@@ -7,5 +7,6 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+Bundle 'Syntastic'
 
 filetype plugin indent on     " required!
