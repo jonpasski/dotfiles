@@ -37,7 +37,7 @@ fi
 PROMPT_DIRTRIM=4
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${C_LIGHT_GREEN}\u@\h${C_RESET}:${C_LIGHT_CYAN}\w${C_RESET}\n\$ "
+    PS1="${C_GREEN}\u@\h${C_RESET}:${C_CYAN}\w${C_RESET}\n\$ "
 else
     PS1='$\u@\h:\w\n\$ '
 fi
