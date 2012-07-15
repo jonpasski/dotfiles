@@ -1,0 +1,5 @@
+defscrollback 5000
+vbell off
+setenv SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
+term screen-256color
+
