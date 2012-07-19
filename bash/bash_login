@@ -24,6 +24,7 @@ for config_file in ${DOTFILES}/bash/*-neutral.bash; do
 done
 
 BK_USER=jpasski
+PATH="${PATH}:~/bin"
 
 # If not running interactively, don't do anything
 #[ -z "$PS1" ] && return
