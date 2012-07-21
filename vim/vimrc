@@ -8,6 +8,13 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+Bundle 'clang-complete'
+Bundle 'scratch.vim'
+Bundle 'Solarized'
+Bundle 'Syntastic'
+Bundle 'taglist.vim'
+Bundle 'The-NERD-tree'
+
 filetype plugin indent on     " required!
 
 set nowrap        "don't wrap lines
