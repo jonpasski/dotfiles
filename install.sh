@@ -6,6 +6,7 @@ DOTFILES=${DOTFILES:-~/src/dotfiles};
 BACKUPS=${DOTFILES}/backups
 
 #TODO use test, very hackish for all of the below
+#TODO use dates in the backup files, very hackish for all of the below
 mkdir -p ${BACKUPS}/{vim,bash,screen}
 
 cp ~/.vimrc ${BACKUPS}/vim/
@@ -17,6 +18,10 @@ ln -fs ${DOTFILES}/bash/bash_login ~/.bash_login
 # screen
 cp ~/.screenrc ${BACKUPS}/screen/
 ln -fs ${DOTFILES}/screen/screenrc ~/.screenrc
+
+# ssh
+chmod o+x ${DOTFILES}/ssh/rc
+ln -fs ${DOTFILES}/ssh/rc ~/.ssh/rc
 
 # vundle
 mkdir -p ~/.vim/bundle
