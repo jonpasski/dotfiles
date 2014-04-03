@@ -17,6 +17,7 @@ Bundle 'The-NERD-tree'
 
 filetype plugin indent on     " required!
 
+syntax on
 set nowrap        "don't wrap lines
 set scrolloff=2         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15

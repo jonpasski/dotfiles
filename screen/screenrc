@@ -1,15 +1,13 @@
 defscrollback 5000
 vbell off
-setenv SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
-term screen-256color
-screen -t x11
-screen -t "prevent vim"
-stuff "cd ~/src/prevent-davis"
-stuff "vim"
-stuff ":NERDTree"
-screen -t "prevent"
-stuff "cd ~/src/prevent-davis"
-screen -t "cim-davis"
-stuff "cd ~/src/cim-davis"
-screen -t "local-src"
-stuff "cd ~/local-src"
+source ${HOME}/.screenrc_local
+
+screen -t "prevent root"
+stuff "cd ~/src/prevent"
+screen -t "prevent checkers"
+stuff "cd ~/src/prevent/analysis/checkers/security/checkers"
+screen -t "prevent packages"
+stuff "cd ~/src/prevent/packages"
+screen -t "ipython"
+stuff "ipython"
+screen -t "bash"

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #TODO need to source a file for an optional dotfiles directory
 if [ -r ~/.dotfiles ]; then
     source ~/.dotfiles
@@ -14,6 +16,10 @@ ln -fs ${DOTFILES}/vim/vimrc ~/.vimrc
 
 cp ~/.bash_login ${BACKUPS}/bash/
 ln -fs ${DOTFILES}/bash/bash_login ~/.bash_login
+ln -fs ${DOTFILES}/bash/bash_login ~/.bashrc
+
+cp ~/.inputrc ${BACKUPS}/bash/
+ln -fs ${DOTFILES}/bash/inputrc ~/.inputrc
 
 # screen
 cp ~/.screenrc ${BACKUPS}/screen/
@@ -22,6 +28,13 @@ ln -fs ${DOTFILES}/screen/screenrc ~/.screenrc
 # ssh
 chmod o+x ${DOTFILES}/ssh/rc
 ln -fs ${DOTFILES}/ssh/rc ~/.ssh/rc
+
+if [ -f "${DOTFILES}/screen/screenrc-${OSTYPE}" ];
+then
+    ln -fs ${DOTFILES}/screen/screenrc-${OSTYPE} ~/.screenrc_local
+else
+    touch ~/.screenrc_local
+fi
 
 # vundle
 mkdir -p ~/.vim/bundle

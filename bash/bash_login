@@ -1,7 +1,10 @@
 if [ -r ~/.dotfiles ]; then
     source ~/.dotfiles
 fi
+
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/bin:/usr/local/share/python3:/usr/local/share/npm/bin:~/bin/arcanist/bin:~/src/prevent/objs/macosx/root/bin
 DOTFILES=${DOTFILES:-~/src/dotfiles}; export DOTFILES
+
 #(cd $DOTFILES && git pull -q)
 # hackish
 case `uname` in
@@ -40,7 +43,7 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-
+#PYTHONPATH=/usr/local/lib/python2.7/site-packages
 PAGER=less; export PAGER
 
 # check the window size after each command and, if necessary,
